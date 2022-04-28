@@ -3,6 +3,8 @@ using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyBookWeb.Controllers;
+[Area("Admin")]
+
 
 public class CategoryController : Controller
 {

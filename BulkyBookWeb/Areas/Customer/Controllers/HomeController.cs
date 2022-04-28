@@ -5,6 +5,7 @@ using BulkyBook.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyBookWeb.Controllers;
+[Area("Customer")]
 
 public class HomeController : Controller
 {
