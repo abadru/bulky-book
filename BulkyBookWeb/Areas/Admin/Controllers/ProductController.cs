@@ -31,13 +31,13 @@ public class ProductController : Controller
         ProductVM productVM = new()
         {
             Product = new Product(),
-            CategoryList = _unitOfWork.Category.GetAll()
+            CategoryList = _unitOfWork.Category.GetAll(null)
                 .Select(category => new SelectListItem
                 {
                     Text = category.Name,
                     Value = category.Id.ToString()
                 }),
-            CoverTypeList = _unitOfWork.CoverType.GetAll()
+            CoverTypeList = _unitOfWork.CoverType.GetAll(null)
                 .Select(coverType => new SelectListItem
                 {
                     Text = coverType.Name,
@@ -151,7 +151,7 @@ public class ProductController : Controller
     [HttpGet]
     public IActionResult GetAll()
     {
-        var productList = _unitOfWork.Product.GetAll("Category,CoverType");
+        var productList = _unitOfWork.Product.GetAll(null,"Category,CoverType");
 
         return Json(new { data = productList });
     }

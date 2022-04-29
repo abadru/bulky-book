@@ -6,6 +6,10 @@ public interface IUnitOfWork
     ICoverTypeRepository CoverType { get; }
     IProductRepository Product { get; }
     ICompanyRepository Company { get; }
+    IShoppingCartRepository ShoppingCart { get; }
+    IApplicationUserRepository ApplicationUser { get; }
+    IOrderHeaderRepository OrderHeader { get; }
+    IOrderDetailRepository OrderDetail { get; }
 
     void Save();
 }

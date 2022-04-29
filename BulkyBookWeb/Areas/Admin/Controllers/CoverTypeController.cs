@@ -17,7 +17,7 @@ public class CoverTypeController : Controller
     // GET
     public IActionResult Index()
     {
-        IEnumerable<CoverType> coverTypes = _unitOfWork.CoverType.GetAll();
+        IEnumerable<CoverType> coverTypes = _unitOfWork.CoverType.GetAll(null);
         return View(coverTypes);
     }
 
