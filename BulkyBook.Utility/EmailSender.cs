@@ -20,7 +20,7 @@ public class EmailSender: IEmailSender
     
 
         var client = new SendGridClient(SendGridSecret);
-        var from = new EmailAddress("abdul.badru@uem.ac.mz", "Bulky Book");
+        var from = new EmailAddress("email@email.mz", "Bulky Book");
         var to = new EmailAddress(email);
         var msg = MailHelper.CreateSingleEmail(from, to, subject, "", htmlMessage);
         return client.SendEmailAsync(msg);
