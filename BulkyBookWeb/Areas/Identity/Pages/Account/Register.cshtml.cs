@@ -125,13 +125,13 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            if (!await _roleManager.RoleExistsAsync(SD.Role_User_Admin))
+            /*if (!await _roleManager.RoleExistsAsync(SD.Role_User_Admin))
             {
                 await _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Admin));
                 await _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Comp));
                 await _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Indi));
                 await _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Employee));
-            }
+            }*/
         
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
