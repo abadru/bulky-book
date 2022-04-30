@@ -38,7 +38,7 @@ public class OrderHeaderRepository : Repository<OrderHeader>, IOrderHeaderReposi
         var orderHeader = _context.OrderHeaders.FirstOrDefault(x => x.Id == id);
 
         if (orderHeader != null)
-        {
+        {orderHeader.PaymentDate = DateTime.Now;
             orderHeader.SessionId = sesssionId;
             orderHeader.PaymentIntentId = paymentItentId;
             
